@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes Neuronales Artificiales</title>
+    <meta name="description"
+        content="Guía completa sobre Redes Neuronales Artificiales: historia, modelos, paradigmas de aprendizaje y aplicaciones en inteligencia artificial.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="progress-bar"></div>
+
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-content fade-in">
+            <span class="badge">Inteligencia Artificial</span>
+            <h1>Redes Neuronales:<br><span class="text-gradient">¿Qué son y cómo funcionan?</span></h1>
+            <p class="hero-subtitle">Una mirada profunda a los sistemas conexionistas, su historia, modelos matemáticos,
+                paradigmas de aprendizaje y sus infinitas aplicaciones.</p>
+        </div>
+    </header>
+
+    <main class="container main-layout">
+        <aside class="sidebar fade-in-up">
+            <div class="glass-card toc-card">
+                <h3>Contenido</h3>
+                <nav id="toc">
+                    <ul>
+                        <li><a href="#intro">Introducción</a></li>
+                        <li><a href="#capacitacion">Capacitación</a></li>
+                        <li><a href="#historia">Historia</a></li>
+                        <li><a href="#modelos">Modelos de Red</a></li>
+                        <li><a href="#aprendizaje">El Aprendizaje</a></li>
+                        <li><a href="#aplicaciones">Aplicaciones</a></li>
+                        <li><a href="#critica">Crítica y Desafíos</a></li>
+                        <li><a href="#tipos">Tipos de RNAs</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <article class="content glass-card fade-in-up delay-1">
+            <section id="intro" class="scroll-anim">
+                <h2>¿Qué es una Red Neuronal Artificial?</h2>
+                <p>En el aprendizaje automático, una red neuronal artificial (abreviada ANN o NN) es un modelo dentro de
+                    los llamados sistemas conexionistas, inspirado en la estructura y función de las redes neuronales
+                    biológicas en los cerebros animales.</p>
+                <p>Una ANN consta de unidades o nodos conectados llamados <strong>neuronas artificiales</strong>, que
+                    modelan vagamente las neuronas del cerebro. Estas están conectadas por aristas, que modelan las
+                    sinapsis del cerebro. Cada neurona artificial recibe «señales» de las neuronas conectadas, luego las
+                    procesa y envía una señal a otras neuronas conectadas.</p>
+                <p>La «señal» es un número real, y la salida de cada neurona se calcula mediante una función no lineal
+                    de la suma de sus entradas, llamada <strong>función de activación</strong>. La fuerza de la señal en
+                    cada conexión está determinada por un peso, que se ajusta durante el proceso de aprendizaje.</p>
+                <p>Por lo general, las neuronas se agrupan en capas. Las señales viajan desde la primera capa (la capa
+                    de entrada) hasta la última capa (la capa de salida), posiblemente pasando por múltiples capas
+                    intermedias (capas ocultas). Una red se denomina típicamente <em>red neuronal profunda</em> si tiene
+                    al menos dos capas ocultas.</p>
+            </section>
+
+            <section id="capacitacion" class="scroll-anim">
+                <h2>Capacitación y Entrenamiento</h2>
+                <p>Las redes neuronales se entrenan típicamente a través de la minimización de riesgos empíricos. Este
+                    método se basa en la idea de optimizar los parámetros de la red para minimizar la diferencia entre
+                    el resultado previsto y los valores objetivo reales en un conjunto de datos.</p>
+                <p>Los métodos basados en gradientes, como la <strong>Retropropagación</strong> (Backpropagation), se
+                    utilizan generalmente para estimar los parámetros de la red. Durante la fase de entrenamiento, las
+                    ANN aprenden de los datos de entrenamiento etiquetados, actualizando iterativamente sus parámetros
+                    para minimizar una Función de pérdida definida.</p>
+                <p>Sobresalen en áreas donde la detección de soluciones o características es difícil de expresar con la
+                    programación convencional. Las redes neuronales actuales suelen contener desde unos miles a unos
+                    pocos millones de unidades neuronales.</p>
+                <p>Nuevas investigaciones están estudiando los diferentes tipos de señal en el tiempo que los axones se
+                    propagan, donde el aprendizaje profundo interpola una mayor complejidad que un conjunto de variables
+                    booleanas encendidas o apagadas.</p>
+            </section>
+
+            <section id="historia" class="scroll-anim">
+                <h2>Historia y Evolución</h2>
+                <p><strong>1943:</strong> Warren McCulloch y Walter Pitts crearon un modelo informático para redes
+                    neuronales llamado lógica umbral. Esto dividió la investigación en dos enfoques: biológico y de
+                    inteligencia artificial.</p>
+                <p><strong>Fines de 1940s:</strong> Donald Hebb creó una hipótesis de aprendizaje basado en la
+                    plasticidad neuronal, conocido como aprendizaje de Hebb (aprendizaje no supervisado).</p>
+                <p><strong>1958:</strong> Frank Rosenblatt creó el perceptrón, un algoritmo de reconocimiento de
+                    patrones basado en una red de dos capas.</p>
+                <p><strong>1969:</strong> La investigación se estancó tras la publicación de Minsky y Papert, que
+                    demostró que los perceptrones básicos no podían procesar el circuito XOR (o-exclusivo).</p>
+                <p><strong>1975 y 1980s:</strong> El avance clave fue el algoritmo de <em>propagación hacia atrás</em>
+                    de Werbos (1975), resolviendo el problema XOR. En los 80s, el procesamiento distribuido en paralelo
+                    ("conexionismo") se hizo popular.</p>
+                <p><strong>Años recientes (Aprendizaje Profundo):</strong> Problemas como el "desvanecimiento del
+                    gradiente" fueron mitigados con nuevos enfoques (como los de Schmidhuber), y la adopción masiva de
+                    GPUs permitió escalar las redes, marcando el inicio del auge del Aprendizaje Profundo y ganando
+                    múltiples competiciones internacionales de reconocimiento de patrones.</p>
+            </section>
+
+            <section id="modelos" class="scroll-anim">
+                <h2>Modelos y Función de Red</h2>
+                <p>Los modelos de redes neuronales en IA definen una función matemática o una distribución. La palabra
+                    "red" se refiere a las interconexiones entre capas.</p>
+                <p>Un RNA se define típicamente por tres tipos de parámetros:</p>
+                <ul class="feature-list">
+                    <li>El patrón de interconexión entre las diferentes capas de neuronas.</li>
+                    <li>El proceso de aprendizaje para la actualización de los pesos.</li>
+                    <li>La función de activación que convierte las entradas ponderadas en salidas.</li>
+                </ul>
+                <p>Matemáticamente, es una composición de funciones representable mediante un <em>Grafo de
+                        dependencias</em>. Las redes donde los datos fluyen en un solo sentido se denominan
+                    <strong>feedforward</strong> (grafo dirigido acíclico). Si tienen ciclos, se denominan
+                    <strong>recurrentes</strong>.
+                </p>
+            </section>
+
+            <section id="aprendizaje" class="scroll-anim">
+                <h2>Paradigmas de Aprendizaje</h2>
+                <p>Dada una tarea, el aprendizaje consiste en encontrar una función óptima utilizando observaciones,
+                    minimizando una "función de coste". Existen tres grandes paradigmas:</p>
+
+                <ul class="cards-list">
+                    <li>
+                        <strong>Aprendizaje Supervisado:</strong> Se proveen ejemplos de pares de entrada/salida (datos
+                        etiquetados). El objetivo es inferir el mapeo. Ejemplos: reconocimiento de patrones,
+                        clasificación, regresión.
+                    </li>
+                    <li>
+                        <strong>Aprendizaje No Supervisado:</strong> Solo se proveen datos de entrada, sin etiquetas. Se
+                        busca encontrar estructuras ocultas, como agrupamiento (clustering) o compresión de datos.
+                    </li>
+                    <li>
+                        <strong>Aprendizaje por Refuerzo:</strong> Un agente interactúa con el medio ambiente,
+                        recibiendo observaciones y recompensas o castigos. El objetivo es descubrir una política para
+                        seleccionar acciones que maximicen la recompensa a largo plazo (Ej: robótica, juegos como el
+                        Ajedrez o Póquer).
+                    </li>
+                </ul>
+            </section>
+
+            <section id="aplicaciones" class="scroll-anim">
+                <h2>Aplicaciones en la Vida Real</h2>
+                <p>Las tareas se agrupan en categorías como aproximación de funciones, clasificación, procesamiento de
+                    datos, robótica e ingeniería de control.</p>
+                <ul class="feature-list highlight">
+                    <li><strong>Reconocimiento de patrones:</strong> Voz, imágenes, reconocimiento facial, lectura de
+                        textos manuscritos.</li>
+                    <li><strong>Predicciones:</strong> Mercado financiero, meteorología.</li>
+                    <li><strong>Medicina:</strong> Detección híbrida de cáncer de pulmón, diagnóstico de cáncer de
+                        próstata y colorrectal.</li>
+                    <li><strong>Sistemas autónomos:</strong> Control de vehículos, predicción de trayectorias.</li>
+                    <li><strong>Minería de datos y filtrado:</strong> Prevención de spam, separación de señales,
+                        traducción automática.</li>
+                </ul>
+            </section>
+
+            <section id="critica" class="scroll-anim">
+                <h2>Críticas y Desafíos</h2>
+                <ul class="warning-list">
+                    <li><strong>Entrenamiento masivo:</strong> Las redes necesitan millones de ejemplos representativos
+                        para evitar el "sobreajuste" y funcionar en la vida real.</li>
+                    <li><strong>Caja Negra:</strong> A diferencia de los algoritmos programados, es difícil entender
+                        "qué" ha aprendido exactamente una red. Sus soluciones parecen magia.</li>
+                    <li><strong>Diferencias biológicas:</strong> La retropropagación contradice principios de neuronas
+                        reales (donde la información fluye hacia adelante por el axón).</li>
+                    <li><strong>Consumo de hardware:</strong> Simular billones de conexiones consume cantidades
+                        increíbles de RAM y tiempo de CPU, mitigado recientemente por el uso intensivo de GPGPUs y TPUs.
+                    </li>
+                </ul>
+            </section>
+
+            <section id="tipos" class="scroll-anim">
+                <h2>Las clases y tipos de RNAs</h2>
+                <p>La diversidad de arquitecturas es inmensa. Algunos de los tipos más notables incluyen:</p>
+                <ul class="feature-list">
+                    <li>Red neuronal feedforward (FNN) y Perceptrón Multicapa.</li>
+                    <li>Red neuronal recurrente (RNN) y Memoria a largo plazo corto (LSTM).</li>
+                    <li>Red neuronal de convolución (CNN), ideales para imágenes.</li>
+                    <li>Mapas autoorganizados de Kohonen.</li>
+                    <li>Máquina de Boltzmann y Red de Hopfield.</li>
+                    <li>Redes neuronales formadas instantáneamente (ITNN) y Redes de Impulsos (SNN).</li>
+                </ul>
+                <p>Además, enfoques modernos combinan redes neuronales con memoria externa, como las Máquinas de Turing
+                    Neuronales (DeepMind) o Redes de Memoria de Facebook, que permiten deducción algorítmica y
+                    procesamiento secuencial complejo.</p>
+            </section>
+
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
